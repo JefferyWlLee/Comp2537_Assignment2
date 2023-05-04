@@ -258,6 +258,18 @@ app.get('/admin', sessionValidation, adminAuthorization, async (req,res) => {
     
 });
 
+app.get('/admin/demote', (req,res) => {
+	var user = req.query.user;
+	userCollection.updateOne({username:user}, {$set: {user_type:"user"}});
+	res.redirect("/admin");
+})
+
+app.get('/admin/promote', (req,res) => {
+	var user = req.query.user;
+	userCollection.updateOne({username:user}, {$set: {user_type:"admin"}});
+	res.redirect("/admin");
+})
+
 app.use(express.static(__dirname + "/public"));
 
 app.get("*", (req,res) => {

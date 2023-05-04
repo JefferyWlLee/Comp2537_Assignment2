@@ -1,8 +1,8 @@
 <li> <%= user.username %> 
      <% if (user.user_type == "admin"){ %>
-        <input type="button" value="demote" onclick="demote(user.userName)">
+        <input type="button" value="demote" onclick="window.location.href='/admin/demote?user=<%= user.username %>'"
      <% } else { %>
-        <input type="button" value="promote" onclick="promote(user.userName)">
+        <input type="button" value="promote" onclick="window.location.href='/admin/promote?user=<%= user.username %>'">
      <% } %>
      
 </li>
