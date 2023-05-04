@@ -1,0 +1,8 @@
+<li> <%= user.username %> 
+     <% if (user.user_type == "admin"){ %>
+        <input type="button" value="demote" onclick="demote(user.userName)">
+     <% } else { %>
+        <input type="button" value="promote" onclick="promote(user.userName)">
+     <% } %>
+     
+</li>
