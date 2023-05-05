@@ -209,7 +209,7 @@ app.get('/admin/promote', (req,res) => {
 	res.redirect("/admin");
 })
 
-app.get('/member', (req,res) => {
+app.get('/member',sessionValidation , (req,res) => {
 	res.render("members");
 })
 

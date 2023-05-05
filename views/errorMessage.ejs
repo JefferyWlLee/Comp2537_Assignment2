@@ -1,5 +1,7 @@
 <%- include("templates/header") %> 
     <h1 style='color:red'>Error!</h1>
-    <div><%= error %> </div>
-    <a href="/">Home</a>
+    <div class="alert alert-danger" role="alert">
+       <%= error %>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="window.location.href='/'">Home</button>
 <%- include("templates/footer") %> 

@@ -1,8 +1,8 @@
-<li> <%= user.username %> 
+<li class="list-group-item"> <%= user.username %> 
      <% if (user.user_type == "admin"){ %>
-        <input type="button" value="demote" onclick="window.location.href='/admin/demote?user=<%= user.username %>'"
+        <input class="btn btn-primary" type="button" value="demote" onclick="window.location.href='/admin/demote?user=<%= user.username %>'"
      <% } else { %>
-        <input type="button" value="promote" onclick="window.location.href='/admin/promote?user=<%= user.username %>'">
+        <input class="btn btn-primary" type="button" value="promote" onclick="window.location.href='/admin/promote?user=<%= user.username %>'">
      <% } %>
      
 </li>

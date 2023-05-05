@@ -1,11 +1,3 @@
 <%- include("templates/header") %> 
     <h1>Welcome</h1>
-    <% if (authenticated) {%>
-        <a href="/logout">logout</a>
-        <a href="/admin">admin</a>
-    <% } else {%>
-    <a href="/login">Login</a>
-    <a href="/createuser">Sign up</a>
-    <a href="/admin">admin</a>
-    <%}%>
 <%- include("templates/footer") %> 
